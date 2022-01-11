@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 				})
 				.filter((item) => {
 					if (price) {
-						return item.price >= price;
+						return item.price <= price;
 					} else {
 						return item;
 					}
