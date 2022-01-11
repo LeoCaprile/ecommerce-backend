@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "mysql2": "^2.3.3"
   },
   "name": "ecommerce-backend",
   "version": "1.0.0",
   "description": "an ecommerce backend made with express",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
