@@ -1,46 +1,61 @@
-# ecommerce-backend
+# Ecommerce-backend
 
-## Table of Contents
+# Table of Contents
 
 - [About](#about)
 - [Getting Started](#getting_started)
 - [Usage](#usage)
-- [Contributing](../CONTRIBUTING.md)
 
-## About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+# About <a name = "about"></a>
 
-## Getting Started <a name = "getting_started"></a>
+Ecommerce backend made with express and mysql.
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+# Getting Started <a name = "getting_started"></a>
 
-### Prerequisites
+To run this app on your local machine do the following steps:
 
-What things you need to install the software and how to install them.
-
-```
-Give examples
+``` 
+git clone (this repo) 
 ```
 
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
 ```
-Give the example
+npm install
 ```
 
-And repeat
-
 ```
-until finished
+npm run dev
 ```
 
-End with an example of getting some data out of the system or using it for a little demo.
+# Usage <a name = "usage"></a>
 
-## Usage <a name = "usage"></a>
+In your local enviroment try "https://localhost:3000/api/(endpoint)"
 
-Add notes about how to use the system.
+## <span style="color:green">GET</span> getCategories
+
+Obtain all categories.
+
+<hr>
+
+## <span style="color:green">GET</span> getDiscounts
+
+Obtain products wich have discounts ordered from highest to lowest
+
+<hr>
+
+## <span style="color:green">GET</span> getProducts
+
+url querys that can be added:
+
+`?name= : return products wich contain string provided` 
+<span style="background-color:green; padding: 2px">STRING</span>
+
+`?category= : return products by it's category` <span style="background-color:blue; padding: 2px">NUMBER</span>
+
+`?price= : return products by it's category` <span style="background-color:blue; padding: 2px">NUMBER</span>
+
+In case it's passed another value like undefined, null or a type that's not compatible with the query, the endpoint returns an empty object.
+
+### <strong>If there no url querys added or values to the querys, return all products from the database.</strong>
+
+
