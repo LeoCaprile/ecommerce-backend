@@ -29,7 +29,8 @@ router.get('/', (req, res) => {
 					} else {
 						return item;
 					}
-				});
+				})
+				.sort((a, b) => b.price - a.price);
 
 			res.json(filter);
 		} else {
