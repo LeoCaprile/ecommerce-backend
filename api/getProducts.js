@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { query } = require('../config/connection');
 const connection = require('../config/connection');
 
 //Obtener todos los productos o filtrar por querys.
@@ -26,11 +25,12 @@ router.get('/', (req, res) => {
 				})
 				.filter((item) => {
 					if (price) {
-						return item.price >= price;
+						return item.price <= price;
 					} else {
 						return item;
 					}
-				});
+				})
+				.sort((a, b) => b.price - a.price);
 
 			res.json(filter);
 		} else {
