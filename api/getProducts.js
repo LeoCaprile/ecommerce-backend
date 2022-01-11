@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { query } = require('../config/connection');
 const connection = require('../config/connection');
 
 //Obtener todos los productos o filtrar por querys.
